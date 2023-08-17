@@ -8,7 +8,7 @@ const ContentTitle = ({ title }) => {
         <AiOutlineUser className='text-5xl'/>
         <h2 className='font-semibold text-3xl '>{title}</h2>
         </div>
-        <div className='border-b-[1px] w-[60vw] border-[#bababa] mt-10'></div>
+        <div className='border-b-[1px] w-[55vw] border-[#bababa] mt-10'></div>
     </div>
   )
 }
