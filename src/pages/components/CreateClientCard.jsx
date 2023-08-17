@@ -3,7 +3,7 @@ import Button from './Button';
 
 const CreateClientCard = () => {
   return (
-    <div className='w-[50%] mx-auto mt-10 flex justify-between'>
+    <div className='w-[55%] mx-auto mt-10 flex justify-between'>
       <div className='flex flex-col gap-3'>
         <h2 className='text-xl text-[#616161] font-bold'>
           Listagem de usuários
@@ -12,12 +12,14 @@ const CreateClientCard = () => {
           Escolha um cliente para visualizar os detalhes
         </p>
       </div>
-      <Button
-        background='primary'
-        size='w-[120px]'
-        height='h-[40px]'
-        title='Novo cliente'
-      />
+      <div className='mr-6'>
+        <Button
+          background='primary'
+          size='w-[120px]'
+          height='h-[40px]'
+          title='Novo cliente'
+        />
+      </div>
     </div>
   );
 };

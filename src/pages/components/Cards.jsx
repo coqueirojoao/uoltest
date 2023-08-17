@@ -1,5 +1,6 @@
 import React from 'react';
 import { formattedCpf, formattedPhone } from '../../assets/helpers/formatTags';
+import Button from './Button';
 
 const Cards = ({ clients }) => {
   const checkClientStatus = (status) => {
@@ -19,7 +20,7 @@ const Cards = ({ clients }) => {
       {clients?.map((client) => (
         <div
           key={client.id}
-          className='w-[50%] flex justify-between mx-auto items-center mt-10 border-[1px] border-[#bababa] p-5'
+          className='w-[55%] flex justify-between mx-auto items-center mt-10 border-[1px] border-[#bababa] p-5'
         >
           <div className='flex flex-col justify-center w-[25%]'>
             <p className='text-[#616161]'>{client.name}</p>
@@ -36,6 +37,14 @@ const Cards = ({ clients }) => {
               )}`}
             ></span>
             <p className='text-[#616161] '>{client.status}</p>
+          </div>
+          <div className=''>
+            <Button
+              title='Editar'
+              background='secondary'
+              size='w-[130px]'
+              height='h-[45px]'
+            />
           </div>
         </div>
       ))}

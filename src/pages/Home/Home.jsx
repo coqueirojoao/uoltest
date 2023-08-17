@@ -22,7 +22,7 @@ const Home = () => {
       <ContentTitle title='Painel de clientes' />
       <CreateClientCard />
       <Cards clients={clients} />
-      <h2 className='w-[50%] mx-auto mt-5 text-[#bababa]'>{`Exibindo ${clients.length} clientes`}</h2>
+      <h2 className='w-[55%] mx-auto mt-5 text-[#bababa]'>{`Exibindo ${clients?.length} clientes`}</h2>
     </div>
   );
 };
