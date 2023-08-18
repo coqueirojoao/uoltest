@@ -7,8 +7,16 @@ import Button from '../components/Button';
 
 import { inputTypes } from '../../assets/helpers/inputTypes';
 import DropdownSelect from '../components/DropdownSelect';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate('/');
+    }
+
   return (
     <div className='overflow-x-hidden'>
         <Header />
@@ -22,7 +30,7 @@ const Register = () => {
         </div>
         <div className='my-8 w-[65%] lg:w-[55%] mx-auto flex gap-3'>
           <Button title='Criar' size='w-[130px]' height='h-[45px]' background='primary' />
-          <Button title='Voltar' size='w-[130px]' height='h-[45px]' background='secondary' />
+          <Button title='Voltar' size='w-[130px]' height='h-[45px]' background='secondary' onClick={handleClick} />
         </div>
     </div>
   )

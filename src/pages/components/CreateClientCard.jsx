@@ -1,7 +1,14 @@
 import React from 'react';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 const CreateClientCard = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/register');
+  }
   return (
     <div className='w-[65%] lg:w-[55%] mx-auto mt-10 flex flex-col lg:flex-row justify-between'>
       <div className='flex flex-col gap-3'>
@@ -12,7 +19,7 @@ const CreateClientCard = () => {
           Escolha um cliente para visualizar os detalhes
         </p>
       </div>
-      <div className='mr-6 mt-5 lg:mt-0'>
+      <div className='mr-6 mt-5 lg:mt-0 h-[40px] w-[120px]' onClick={handleClick}>
         <Button
           background='primary'
           size='w-[120px]'

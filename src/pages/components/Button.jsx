@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Button = ({ background, size, height, title }) => {
+const Button = ({ background, size, height, title, onClick }) => {
   return (
     <div
+      onClick={onClick}
       className={`${
         background === 'primary'
           ? `bg-[#ED9301] rounded-md text-white ${size} ${height} flex justify-center items-center cursor-pointer transition duration-150 ease-in-out hover:bg-[#ed9201b9] active:translate-y-[4px]`
