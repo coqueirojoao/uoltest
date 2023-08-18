@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import ContentTitle from '../components/ContentTitle';
 import CreateClientCard from '../components/CreateClientCard';
-import Cards from '../components/Cards';
+import ClientCards from '../components/ClientCards';
 import ClientsCount from '../components/ClientsCount';
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
       <Header />
       <ContentTitle title='Painel de clientes' />
       <CreateClientCard />
-      <Cards clients={clients} />
+      <ClientCards clients={clients} />
       <ClientsCount clients={clients} />
     </div>
   );

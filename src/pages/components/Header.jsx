@@ -1,5 +1,5 @@
 import React from 'react'
-import uol_logo from '../../assets/uol_logo.png';
+import uol_logo from '../../assets/images/uol_logo.png';
 
 const Header = () => {
   return (

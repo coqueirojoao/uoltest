@@ -2,7 +2,7 @@ import React from 'react';
 import { formattedCpf, formattedPhone } from '../../assets/helpers/formatTags';
 import Button from './Button';
 
-const Cards = ({ clients }) => {
+const ClientCards = ({ clients }) => {
   const checkClientStatus = (status) => {
     if (status === 'Ativo') {
       return 'bg-[#009018]';
@@ -52,4 +52,4 @@ const Cards = ({ clients }) => {
   );
 };
 
-export default Cards;
+export default ClientCards;
