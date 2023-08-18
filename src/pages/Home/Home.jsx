@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import ContentTitle from '../components/ContentTitle';
 import CreateClientCard from '../components/CreateClientCard';
 import Cards from '../components/Cards';
+import ClientsCount from '../components/ClientsCount';
 
 const Home = () => {
   const [clients, setClients] = useState(null);
@@ -17,12 +18,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Header />
       <ContentTitle title='Painel de clientes' />
       <CreateClientCard />
       <Cards clients={clients} />
-      <h2 className='w-[55%] mx-auto mt-5 text-[#bababa]'>{`Exibindo ${clients?.length} clientes`}</h2>
+      <ClientsCount clients={clients} />
     </div>
   );
 };

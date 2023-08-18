@@ -3,7 +3,7 @@ import Button from './Button';
 
 const CreateClientCard = () => {
   return (
-    <div className='w-[55%] mx-auto mt-10 flex justify-between'>
+    <div className='w-[65%] lg:w-[55%] mx-auto mt-10 flex flex-col lg:flex-row justify-between'>
       <div className='flex flex-col gap-3'>
         <h2 className='text-xl text-[#616161] font-bold'>
           Listagem de usuários
@@ -12,7 +12,7 @@ const CreateClientCard = () => {
           Escolha um cliente para visualizar os detalhes
         </p>
       </div>
-      <div className='mr-6'>
+      <div className='mr-6 mt-5 lg:mt-0'>
         <Button
           background='primary'
           size='w-[120px]'

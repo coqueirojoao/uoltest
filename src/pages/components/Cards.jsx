@@ -20,17 +20,17 @@ const Cards = ({ clients }) => {
       {clients?.map((client) => (
         <div
           key={client.id}
-          className='w-[55%] flex justify-between mx-auto items-center mt-10 border-[1px] border-[#bababa] p-5'
+          className='w-[65%] lg:w-[55%] flex flex-col lg:flex-row justify-center lg:justify-between mx-auto items-center mt-10 border-[1px] border-[#bababa] p-5'
         >
-          <div className='flex flex-col justify-center w-[25%]'>
+          <div className='flex flex-col justify-center w-full lg:w-[25%]'>
             <p className='text-[#616161]'>{client.name}</p>
             <p className='text-[#9c9c9c]'>{client.email}</p>
           </div>
-          <div className='flex flex-col justify-center w-[25%]'>
+          <div className='flex flex-col justify-center w-full lg:w-[25%]'>
             <p className='text-[#616161]'>{formattedCpf(client.cpf)}</p>
             <p className='text-[#9c9c9c]'>{formattedPhone(client.phone)}</p>
           </div>
-          <div className='flex justify-center items-center gap-2 w-[25%]'>
+          <div className='flex  items-center gap-2 w-full lg:w-[25%]'>
             <span
               className={`w-3 h-3 rounded-full ${checkClientStatus(
                 client.status
@@ -38,7 +38,7 @@ const Cards = ({ clients }) => {
             ></span>
             <p className='text-[#616161] '>{client.status}</p>
           </div>
-          <div className=''>
+          <div className='mt-8 lg:mt-0'>
             <Button
               title='Editar'
               background='secondary'
