@@ -37,7 +37,7 @@ const Home = () => {
       <Header />
       <ContentTitle title='Painel de clientes' />
       <CreateClientCard />
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <Modal isOpen={isModalOpen} onClose={closeModal} title='Editar contato'>
         {inputTypes.map((e, i) => (
           <Input key={i} type={e.type} placeholder={e.placeholder} />
         ))}

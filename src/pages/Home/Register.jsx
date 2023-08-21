@@ -24,7 +24,7 @@ const Register = () => {
         <NewUserCard />
         <div className='w-[65%] lg:w-[55%] mx-auto mt-20 flex flex-col gap-5'>
         {inputTypes.map((element, i) => (
-          <Input type={element.type} placeholder={element.placeholder} key={i}  />
+          <Input type={element.type} placeholder={element.placeholder} name={element.name} key={i}  />
         ))}
         <DropdownSelect options={['Ativo', 'Inativo', 'Aguardando ativação', 'Desativado']} placeholder='Status' />
         </div>

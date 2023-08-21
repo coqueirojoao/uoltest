@@ -1,18 +1,22 @@
 export const inputTypes = [
     {
         type: 'text',
-        placeholder: 'Nome'
+        placeholder: 'Nome',
+        name: 'name'
     },
     {
         type: 'text',
-        placeholder: 'E-mail'
+        placeholder: 'E-mail',
+        name: 'email'
     },
     {
         type: 'text',
-        placeholder: 'CPF'
+        placeholder: 'CPF',
+        name: 'cpf'
     },
     {
         type: 'text',
-        placeholder: 'Telefone'
+        placeholder: 'Telefone',
+        name: 'phone'
     },
 ]
