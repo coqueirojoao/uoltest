@@ -2,7 +2,7 @@ import React from 'react';
 import { formattedCpf, formattedPhone } from '../../assets/helpers/formatTags';
 import Button from './Button';
 
-const ClientCards = ({ clients }) => {
+const ClientCards = ({ clients, onClick }) => {
   const checkClientStatus = (status) => {
     if (status === 'Ativo') {
       return 'bg-[#009018]';
@@ -44,6 +44,7 @@ const ClientCards = ({ clients }) => {
               background='secondary'
               size='w-[130px]'
               height='h-[45px]'
+              onClick={onClick}
             />
           </div>
         </div>

@@ -4,9 +4,14 @@ import ContentTitle from '../components/ContentTitle';
 import CreateClientCard from '../components/CreateClientCard';
 import ClientCards from '../components/ClientCards';
 import ClientsCount from '../components/ClientsCount';
+import Modal from '../components/Modal';
+
+import { inputTypes } from '../../assets/helpers/inputTypes';
+import Input from '../components/Input';
 
 const Home = () => {
   const [clients, setClients] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchClients = async () => {
@@ -17,12 +22,27 @@ const Home = () => {
     fetchClients();
   }, []);
 
+  
+  const openModal = () => {
+    setIsModalOpen(true);
+    console.log(isModalOpen);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className='overflow-x-hidden'>
       <Header />
       <ContentTitle title='Painel de clientes' />
       <CreateClientCard />
-      <ClientCards clients={clients} />
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        {inputTypes.map((e, i) => (
+          <Input key={i} type={e.type} placeholder={e.placeholder} />
+        ))}
+      </Modal>
+      <ClientCards clients={clients} onClick={openModal} />
       <ClientsCount clients={clients} />
     </div>
   );
